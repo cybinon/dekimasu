@@ -56,8 +56,6 @@ io.on('connection', (socket) => {
         break
     }
   })
-
-  console.log(backEndPlayers)
 })
 
 setInterval(() => {
