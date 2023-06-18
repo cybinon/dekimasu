@@ -85,6 +85,7 @@ socket.on('updatePlayers', (backEndPlayers) => {
       delete frontEndPlayers[id]
     }
   }
+  document.getElementById("player-count").innerHTML = Object.keys(frontEndPlayers).length
 })
 
 
@@ -202,6 +203,8 @@ window.addEventListener('keydown', (event) => {
     case 'KeyD':
       keys.d.pressed = true
       break
+    case 'Space':
+      UIkit.modal("#my-id").show();;
   }
 })
 

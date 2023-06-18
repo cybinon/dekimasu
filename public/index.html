@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.21/dist/css/uikit.min.css" />
   <style>
     body {
       margin: 0;
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-  <div style="
+  <div class="uk-flex uk-flex-1 uk-flex-column" uk-margin style="
         position: absolute;
         color: white;
         padding: 8px;
@@ -32,6 +33,32 @@
         font-size: 14px;
         user-select: none;
       ">
+
+
+    <div class="uk-badge">Players: <span id="player-count"></span></div>
+    <button class="uk-button uk-button-secondary uk-border-rounded " uk-toggle="target: #my-id" type="button">My
+      status</button>
+
+
+    <!-- This is the modal -->
+    <div id="my-id" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Cell</h2>
+        <dl class="uk-description-list">
+
+          <dt>Membrane</dt>
+          <dd>The cell membrane, also called the plasma membrane, is found in all cells and separates the interior of
+            the cell from the outside environment. The cell membrane consists of a lipid bilayer that is semipermeable.
+            The cell membrane regulates the transport of materials entering and exiting the cell.</dd>
+
+          <dt>Chromosomes</dt>
+          <dd>Chromosomes are thread-like structures located inside the nucleus of animal and plant cells.</dd>
+
+        </dl>
+        <img src="/asset/cell.jpg" />
+        <button class="uk-modal-close" type="button"></button>
+      </div>
+    </div>
   </div>
   <div class="mobile-hide" style="
       position:absolute;
@@ -46,6 +73,8 @@
   </div>
   <canvas></canvas>
 
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.21/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.21/dist/js/uikit-icons.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
     integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -58,6 +87,7 @@
   <script src="./js/classes/Projectile.js"></script>
   <script src="./js/eventListeners.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/bot.js"></script>
 </body>
 
 </html>
