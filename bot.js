@@ -2,7 +2,7 @@ const { createCanvas } = require("canvas")
 const { io } = require("socket.io-client")
 
 const canvas = createCanvas(1080, 1920)
-const socket = io("http://localhost:3000")
+const socket = io("https://game.hexason.com")
 const frontEndPlayers = {}
 
 
